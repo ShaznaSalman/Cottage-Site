@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cottages</title>
+    <link rel="icon" href="images\logo\logo-color.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo-link">
+            <img src="images\logo\logo-no-background.png" alt="Your Logo" id="logo">
+        </a>
+        <h1>Cottages</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li>
+                <a href="#" onclick="updateTable('vindy')" >
+                    <div class="imgCont">
+                        <img src="images/Windy/1.png" alt="Not Found">
+                        <div class="overlay">Windy Hanthana</div>
+                    </div>
+                 </a>
+            </li>
+            <li>
+                <a href="#" onclick="updateTable('cottage23')" >
+                    <div class="imgCont">
+                        <img src="images/cottage23/1.jpg" alt="Not Found">
+                        <div class="overlay">Cottage 23</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="updateTable('metrostay')" >
+                    <div class="imgCont">
+                        <img src="images/MetroStay/1.jpg" alt="Not Found">
+                        <div class="overlay">Metro Stay</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+    <section>
+        <h2 id="cottage-title">Cottage</h2>
+        <p><strong>Location:</strong> <span id="cottage-location"></span></p>
+        <div class="table-container">
+        <table>
+            <tr>
+                <th style="text-align: center;">Apartment Info</th>
+                <th style="text-align: center;">Facilities</th>
+                <th style="text-align: center;">Location Details</th>
+                <th style="text-align: center;">360 View</th>
+                <th style="text-align: center;">Gallery</th>
+                <th style="text-align: center;">Contact</th>
+            </tr>
+            <tr>
+                <td id="cottage-info"></td>
+                <td id="facilities"></td>
+                <td id="location"></td>
+                <td id="view-360">
+                    <div class="map-container" id="mapContainer" ></div><br>
+                    <a onclick="open360ViewModal()" class="enlarge-link" id="enlargeLink">Click here to make the map larger</a>
+                </td>
+                <td id="gallery">
+                    <div class="image-container" id="imageContainer"> </div></td>
+                <td id="contact"></td>
+            </tr>
+        </table>
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+        <div id="viewModal" class="modal">
+            <span class="close" onclick="close360ViewModal()">&times;</span>
+            <iframe id="view360Iframe" class="modal-content"></iframe>
+        </div>
+    </section>
+    </main>
+    <script src="JavaScript/javaScript.js"> </script>
+    <script>
+        function open360ViewModal() {
+        const viewModal = document.getElementById('viewModal');
+        const view360Iframe = document.getElementById('view360Iframe');
+        const mapContainerIframe = document.querySelector('#mapContainer iframe');
+            if (mapContainerIframe) {
+                view360Iframe.src = mapContainerIframe.src;
+                viewModal.style.display = 'block';
+            }
+        }
+        function close360ViewModal() {
+            const viewModal = document.getElementById('viewModal');
+            viewModal.style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const viewModal = document.getElementById('viewModal');
+            if (event.target == viewModal) {
+                viewModal.style.display = 'none';
+            }
+        };
+        
+        document.querySelector('.modal .close').addEventListener('click', close360ViewModal);
+
+    </script>
+
+</body>
+</html>
