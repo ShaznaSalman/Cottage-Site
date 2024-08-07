@@ -255,11 +255,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 imageContainer.appendChild(createGallerySection('Kitchen', 'images/MetroStay/kitchen/', data.imageCounts.kitchen));
                 imageContainer.appendChild(createGallerySection('Bathroom', 'images/MetroStay/bathroom/', data.imageCounts.bathroom));
             } else if (set === 'vindy') {
-                imageContainer.appendChild(createGallerySection('Apartment', 'images/windy/apartment/', data.imageCounts.apartment));
-                imageContainer.appendChild(createGallerySection('Exterior', 'images/windy/exterior/', data.imageCounts.exterior));
-                imageContainer.appendChild(createGallerySection('Rooms', 'images/windy/rooms/', data.imageCounts.rooms));
-                imageContainer.appendChild(createGallerySection('Kitchen', 'images/windy/kitchen/', data.imageCounts.kitchen));
-                imageContainer.appendChild(createGallerySection('Bathroom', 'images/windy/bathroom/', data.imageCounts.bathroom));
+                imageContainer.appendChild(createGallerySection('Apartment', 'images/Windy/apartment/', data.imageCounts.apartment));
+                imageContainer.appendChild(createGallerySection('Exterior', 'images/Windy/exterior/', data.imageCounts.exterior));
+                imageContainer.appendChild(createGallerySection('Rooms', 'images/Windy/rooms/', data.imageCounts.rooms));
+                imageContainer.appendChild(createGallerySection('Kitchen', 'images/Windy/kitchen/', data.imageCounts.kitchen));
+                imageContainer.appendChild(createGallerySection('Bathroom', 'images/Windy/bathroom/', data.imageCounts.bathroom));
             }
 
             document.getElementById('contact').innerText = data.contact;
