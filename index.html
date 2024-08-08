@@ -25,6 +25,7 @@
                     <div class="imgCont">
                         <img src="images/windy/1.png" alt="Not Found">
                         <div class="overlay">Windy Hanthana</div>
+                        <div class="text-container">Windy Hanthana</div>
                     </div>
                  </a>
             </li>
@@ -33,6 +34,7 @@
                     <div class="imgCont">
                         <img src="images/cottage23/1.jpg" alt="Not Found">
                         <div class="overlay">Cottage 23</div>
+                        <div class="text-container">Cottage 23</div>
                     </div>
                 </a>
             </li>
@@ -41,6 +43,7 @@
                     <div class="imgCont">
                         <img src="images/MetroStay/1.jpg" alt="Not Found">
                         <div class="overlay">Metro Stay</div>
+                        <div class="text-container">Metro Stay</div>
                     </div>
                 </a>
             </li>
@@ -51,7 +54,10 @@
         <h2 id="cottage-title">Cottage</h2>
         <p><strong>Location:</strong> <span id="cottage-location"></span></p>
         <div class="table-container">
-        <table>
+            <div id="placeholder-text">
+                <p>Please select a cottage to view details.</p>
+            </div>
+        <table  id="details-table">
             <tr>
                 <th style="text-align: center;">Apartment Info</th>
                 <th style="text-align: center;">Facilities</th>
@@ -87,6 +93,7 @@
     </main>
     <script src="JavaScript/javaScript.js"> </script>
     <script>
+
         function open360ViewModal() {
         const viewModal = document.getElementById('viewModal');
         const view360Iframe = document.getElementById('view360Iframe');
@@ -96,6 +103,7 @@
                 viewModal.style.display = 'block';
             }
         }
+
         function close360ViewModal() {
             const viewModal = document.getElementById('viewModal');
             viewModal.style.display = 'none';

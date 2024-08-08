@@ -230,6 +230,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //updated table
     function updateTable(set) {
+        document.getElementById('placeholder-text').style.display = 'none';
+        document.getElementById('details-table').style.display = 'table';
+
         const data = cottages[set];
         if (data) {
             document.getElementById('cottage-title').innerText = data.title;
