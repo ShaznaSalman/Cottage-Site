@@ -17,7 +17,7 @@ body {
 #placeholder-text {
     text-align: center;
     font-size: 1.2em;
-    color: #555;
+    color: #877878;
 }
 
 
@@ -305,7 +305,7 @@ map {
 .text-container {
     text-align: center;
     font-size: 0.7em;
-    color: #dbd7c8;
+    color: #dcd8c8;
     margin-top: 10px;
     display: none; 
     font-weight: bold;
