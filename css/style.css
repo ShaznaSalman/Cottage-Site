@@ -403,4 +403,7 @@ map {
     nav ul li {
         margin: 20px;
     } 
+    .text-container {
+        display: none;
+    }
 }
